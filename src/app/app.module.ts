@@ -8,6 +8,9 @@ import {AuthModule} from './auth/auth.module';
 import {TrainingModule} from './training/training.module';
 import {AppRoutingModule} from './app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
+import {CommonModule} from '@angular/common';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
     WelcomeComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MaterialModule,
     AuthModule,
     TrainingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
