@@ -11,11 +11,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import {CommonModule} from '@angular/common';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule} from '@angular/forms';
+import {MatLineModule} from '@angular/material/core';
+import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import { TopbarComponent } from './navigation/topbar/topbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SidenavComponent,
+    TopbarComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +31,8 @@ import {FormsModule} from '@angular/forms';
     AuthModule,
     TrainingModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatLineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

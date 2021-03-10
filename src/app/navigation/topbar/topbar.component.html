@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+<button (click)="toggle()" mat-icon-button>
+  <mat-icon>menu_open</mat-icon>
+</button>
+<div>
+  <ul fxLayout fxLayoutGap="12px">
+    <li><a routerLink="training/past">Past</a></li>
+    <li><a routerLink="training">Training</a></li>
+    <li><a href="training/new">New</a></li>
+  </ul>
+</div>
+<div fxFlex fxLayout fxLayoutAlign="flex-end">
+  <ul fxLayout fxLayoutGap="12px">
+    <li><a routerLink="signup">Sign up</a></li>
+    <li><a routerLink="login">Login</a></li>
+  </ul>
+</div>
+</mat-toolbar>
