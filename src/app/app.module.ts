@@ -7,19 +7,20 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { TopbarComponent } from './navigation/topbar/topbar.component';
-import {MatLineModule} from '@angular/material/core';
 import {MaterialModule} from './material.module';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
+import {StopTrainingComponent} from './training/current-training/stop-training.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     SidenavComponent,
-    TopbarComponent
+    TopbarComponent,
+    StopTrainingComponent
   ],
   imports: [
     CommonModule,
@@ -31,9 +32,9 @@ import {BrowserModule} from '@angular/platform-browser';
     TrainingModule,
     AppRoutingModule,
     FlexLayoutModule,
-    MatLineModule
   ],
   providers: [],
+  entryComponents: [StopTrainingComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
