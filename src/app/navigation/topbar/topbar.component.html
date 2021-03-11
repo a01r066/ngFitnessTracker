@@ -4,13 +4,14 @@
 </button>
 <div>
   <ul fxLayout fxLayoutGap="12px">
-    <li><a routerLink="/training">Training</a></li>
+    <li *ngIf="isAuthenticated"><a routerLink="/training">Training</a></li>
   </ul>
 </div>
 <div fxFlex fxLayout fxLayoutAlign="flex-end">
   <ul fxLayout fxLayoutGap="12px">
-    <li><a routerLink="signup">Sign up</a></li>
-    <li><a routerLink="login">Login</a></li>
+    <li *ngIf="!isAuthenticated"><a routerLink="/signup">Signup</a></li>
+    <li *ngIf="!isAuthenticated"><a routerLink="/login">Login</a></li>
+    <li *ngIf="isAuthenticated"><a routerLink="" (click)="onLogout()">Logout</a></li>
   </ul>
 </div>
 </mat-toolbar>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../auth/auth.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  constructor() { }
+  isAuthenticated = false;
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.authService.authChange.subscribe(authStatus => {
+      this.isAuthenticated = authStatus;
+    });
+  }
+
+  onLogout(){
+    this.authService.logout();
   }
 }
